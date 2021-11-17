@@ -1,3 +1,4 @@
+import os
 from functions.arithmetics import arit_run
 from functions.quadratics import quad_run
 
@@ -17,6 +18,7 @@ while True:
     print("Programmet avbrutet, ha en bra dag!")
     break
   elif func_choice in functions:
+    os.system("clear")
     print("Du har valt:", func_choice)
     functions[func_choice]()
   else:
