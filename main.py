@@ -2,6 +2,9 @@ import os
 from functions.arithmetics import arit_run
 from functions.quadratics import quad_run
 
+
+
+#Dictionary where the name of a feature corresponds to its respective function.
 functions = {
 "Arithmetic Calculator": arit_run,
 "Quadratic Equation Calculator": quad_run,
@@ -19,8 +22,8 @@ while True:
     break
   elif func_choice in functions:
     os.system("clear")
-    print("Du har valt:", func_choice)
-    functions[func_choice]()
+    print("Du har valt:", func_choice) 
+    functions[func_choice]() #The function corresponding to the written name will be called.
   else:
     print("Den inskrivna funktionen stöds inte i programmet")
-
+#If the function is not found in the dictionary, this message is returned and the loop continues
