@@ -18,6 +18,7 @@ print(*keys, "\n")
 while True:
   func_choice = input("Vänligen skriv vilken funktion du vill använda (Enter avbryter)")
   if func_choice == "":
+    os.system("clear")
     print("Programmet avbrutet, ha en bra dag!")
     break
   elif func_choice in functions:
