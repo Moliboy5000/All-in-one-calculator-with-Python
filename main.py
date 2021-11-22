@@ -5,7 +5,7 @@ from typing import List, Dict
 
 def main() -> None:
   #Dictionary where the name of a feature corresponds to its respective function.
-  functions_dict: Dict[str,Callable[[],None]] = {
+  functions_dict: Dict[str] = {
     "Arithmetic Calculator": arit_run,
     "Quadratic Equation Calculator": quad_run,
   }
@@ -48,10 +48,12 @@ def main() -> None:
       clear()
       prompt_cancelation()
       break
-    elif func_choice in functions:
+    elif func_choice in functions_dict:
       clear()
       prompt_choice(func_choice)
-      functions[func_choice]() #The function corresponding to the written name will be called.
+      functions_dict[func_choice]()
+      
+       #The function corresponding to the written name will be called.
     else:
       prompt_unsupported()
   #If the function is not found in the dictionary, this message is returned and the loop continues
